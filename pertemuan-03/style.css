@@ -1,0 +1,151 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;   /* jarak antar baris teks*/
+    max-width: 1000px;  /* lebar halaman maksimal*/
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* header */
+header{
+    background-color: #252c5e;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-bottom: 15px;
+}
+
+header h1{
+    font-size: 36px;
+}
+
+header p{
+    color: white;
+}
+
+/* nav bar untuk logo dan menu */
+nav{
+    display: flex;  /* flexbox */
+    flex-direction: row;    /* isi nav ke samping */
+    justify-content: space-between; /* logo mepet kiri, menu mepet kanan */
+    align-items: center;
+    background-color: #582395;
+    padding: 15px 25px;
+    margin-bottom: 15px;
+}
+
+.logo{
+    height: 50px;   /* tinggi */
+    width: 50px;    /* lebar */
+    object-fit: cover;  /* biar tidak gepeng */
+    border-radius: 50%;
+}
+
+.menu{
+    display: flex;  /* mendatar */
+    gap: 20px;  /* jarak antar link */
+}
+
+.menu a{
+    color: #1e293b;
+    text-decoration: none;  /* menghilangkan garis bawah */
+    font-weight: bold;
+    padding: 5px 12px;
+}
+
+/* pseudo selector */
+.menu a:hover{
+    background-color: #1e293b;
+    color: #fbbf24;
+}
+
+.menu a.aktif{
+    border-bottom: 3px solid #1e293b;   /* garis bawah jadi tebal */
+}
+
+/* section */
+section{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+    background-color: #0e7589;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+/* article / konten utama */
+article{
+    background-color: #ccfbf1;
+    padding: 25px;
+}
+
+article h2,
+aside h3{
+    margin-bottom: 10px;
+}
+
+article p{
+    margin-bottom: 12px;
+}
+
+/* aside */
+aside{
+    background-color: #d2329f;
+    padding: 25px;
+    align-self: start;  /* tinggi mengikuti isi konten */
+}
+
+aside ul{
+    list-style: none;   /* menghilangkan titik daftar */
+}
+
+aside li{
+    margin-bottom: 8px;
+}
+
+aside a{
+    display: block; /* link jadi kotak penuh selebar aside */
+    background-color: #874728;
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+}
+
+/* pseudo selector di aside */
+aside a:hover{
+    background-color: #dc2626;
+}
+
+aside a:visited{    /* link yang sudah dikunjungi */
+    color: #e0db48;
+}
+
+aside a:active{ /* link sedang diklik */
+    color: aqua;
+}
+
+/* footer */
+footer{
+    display: grid;
+    grid-template-columns: 2.5fr 1fr 1fr;
+    grid-gap: 10px;
+    background-color: #100b59;
+    color: #e2e8f0;
+    padding: 20px;
+    text-align: center;
+}
+
+footer h4{
+    color: #fbbf24;
+    margin-bottom: 5px;
+}
+
+footer a{
+    color: #e2e8f0;
+}
+
+footer a:hover{
+    color: coral;
+}
