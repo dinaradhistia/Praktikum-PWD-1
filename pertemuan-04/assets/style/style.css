@@ -1,0 +1,61 @@
+/* mengatur kalimat/kata 'Hello!' */
+header h1{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* mengatur kalimat di bawah 'Hello!' */
+header p{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* mengatur kalimat 'Isi Konten' */
+h2{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* mengatur kalimat di isi konten */
+#konten{
+    text-align: justify;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* untuk mengatur kata-kata ̶h̶a̶r̶i̶ ̶i̶n̶i̶  abah zhongli */
+p{
+    text-align: justify;
+    font-family: cursive;
+}
+
+/* mengatur foto/image maomao */
+footer img{
+    width: 150px;
+    height: auto;
+}
+
+/* tombol kembali ke atas */
+#btn-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 33px;
+  height: 33px;
+  border: none;
+  border-radius: 50%;
+  background: #4f46e5;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+
+  /* hidden secara default */
+  display: none;
+
+  /* opacity agar tidak mengganggu konten */
+  opacity: 0.5;
+  transition: opacity 0.3s;
+  z-index: 1000;
+}
+
+/* saat hover, opacity jadi 100% */
+#btn-top:hover {
+  opacity: 1;
+}
