@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Turners</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Link css -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Tugas praktikum pertemuan 5 -->
+    <!-- Header -->
+    <header class="topbar">
+      <div class="logo-wrap">
+        <!-- Logo -->
+        <svg class="logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-label="Logo Page Turners">
+          <path d="M12 6.5C10.2 5.2 7.8 4.5 4 4.5v13c3.8 0 6.2.7 8 2 1.8-1.3 4.2-2 8-2v-13c-3.8 0-6.2.7-8 2z"/>
+          <path d="M12 6.5v13"/>
+        </svg>
+        <h1 class="brand">Page Turners</h1>
+      </div>
+
+      <input type="text" id="cari" placeholder="Cari judul atau penulis..." autocomplete="off">
+
+      <button id="btn-keranjang" type="button">
+        🛒 Keranjang <span id="badge-keranjang">0</span>
+      </button>
+    </header>
+
+    <!-- Panel keranjang (fadeToggle) -->
+    <aside id="panel-keranjang">
+      <div class="panel-head">
+        <h2>Keranjang Belanja</h2>
+        <button id="btn-tutup" type="button" title="Tutup">✕</button>
+      </div>
+
+      <p id="keranjang-kosong">Keranjang masih kosong.</p>
+      <ul id="daftar-keranjang"></ul>
+
+      <div class="panel-foot">
+        <p>Jumlah item: <strong id="jumlah-item">0</strong></p>
+        <p>Total harga: <strong id="total-harga">Rp 0</strong></p>
+        <div class="panel-aksi">
+          <button id="btn-kosongkan" type="button">Kosongkan Keranjang</button>
+          <button id="btn-checkout" type="button">Checkout</button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Hero -->
+    <section class="hero">
+      <h2>Every page, a new world...</h2>
+      <p>Temukan bacaan favoritmu di Page Turners.</p>
+    </section>
+
+    <!-- Daftar produk -->
+    <main>
+      <h2 class="judul-seksi">Daftar Buku</h2>
+      <div id="daftar-produk"></div>
+      <p id="tidak-ditemukan" style="display: none;">Buku tidak ditemukan.</p>
+
+      <!-- Ringkasan pesanan -->
+      <section id="ringkasan">
+        <h2>Ringkasan Pesanan</h2>
+        <p>Nama pembeli: <strong id="ringkasan-nama"></strong></p>
+        <ul id="ringkasan-daftar"></ul>
+        <p class="ringkasan-total">Total: <strong id="ringkasan-total"></strong></p>
+        <p class="terima-kasih">Terima kasih sudah berbelanja di Page Turners!</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; Page Turners</p>
+    </footer>
+
+    <!-- jquery & Link js-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
