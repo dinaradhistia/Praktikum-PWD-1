@@ -24,21 +24,25 @@
     <h3>2. Tabel Perkalian Matriks</h3>
     <table border="1" cellpadding="6" cellspacing="2">
         <tr>
-            <th>Bilangan</th>
+            <td>Bilangan</td>
             <?php
             for ($kolom = 1; $kolom <= 10; $kolom++) {
-                echo "<th>$kolom</th>";
+                echo "<td bgcolor='lime'>$kolom</td>";
             }
             ?>
         </tr>
         <?php
         for ($baris = 1; $baris <= 10; $baris++) {
             echo "<tr>";
-            echo "<th>$baris</th>";
+            echo "<td bgcolor='lime'>$baris</td>";
 
             for ($kolom = 1; $kolom <= 10; $kolom++) {
                 $hasil = $baris * $kolom;
-                echo "<td align='center'>$hasil</td>";
+                if ($hasil % 2 == 0) {
+                    echo "<td align='center' bgcolor='aqua'>$hasil</td>";
+                } else {
+                    echo "<td align='center' bgcolor='yellow'>$hasil</td>";
+                }
             }
             echo "</tr>";
         }
